@@ -45,4 +45,4 @@ https://docs.microsoft.com/en-us/windows/wsl/compare-versions
 
 https://www.whitewaterfoundry.com/what-is-wsl
 __________
-<i>Updated : 01/02/2022, Author : Xen0rInspire</i>
+<i>Updated : 01/02/2022, Authors : Xen0rInspire, AnthonyF</i>
