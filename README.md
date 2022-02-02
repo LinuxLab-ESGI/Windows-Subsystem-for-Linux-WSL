@@ -35,7 +35,7 @@ First, You must be running Windows 10 version 2004 or higher (Build 19041 or hig
 
 ## Appendix - Sources and References
 
-You can find here all my references that I used to write this article and the presentation :
+You can find here all the references that we used to write this article and the presentation :
 
 https://docs.microsoft.com/en-us/windows/wsl/about
 
