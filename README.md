@@ -14,7 +14,7 @@ Although WSl uses virtualization technologies in some cases (more information in
 
 Indeed, if you try to delete your Document folder for example, you will notice that it will be permanently removed from your computer. You can also create a new file with a text editor like vim or nano, and you will be able to edit it with a Windows text editor (like notepad. The WSL can access and interact with your file system directly.
 
-> For the curious ones, we tried to do a `rm -fr /mnt/c` command with the WSL and the root privileges, to delete all the files in the `C:\` directory. It seems that the WSL can only delete the files in the user folder in `C:\Users\<name_of-the_user>`. However, the windows system becomes quite unstable and slow.
+> For the curious ones, we tried to do a `rm -fr /mnt/c` command with the WSL and the root privileges, to delete all the files in the **C:\\** directory. It seems that the WSL can only delete the files in the user folder in **C:\Users\<name_of-the_user>**. However, the windows system becomes quite unstable and slow.
 
 ### WSL 1 vs WSL 2
 
