@@ -1,15 +1,17 @@
 # Windows Subsystem for Linux (known as WSL)
 
 *This article has been written to complete the presentation and to deal in depth with the subject in detail.*
+
+![WSL-Logo](/img/logo-wsl.png)
 __________
 
-## What is the WSL and how it works ?
+## What is the WSL and how it works?
 
 The WSL for **W**indows **S**ubsystem for **L**inux is a compatibility layer developed by Microsoft for running Linux binaries natively (ELF format) in a console environment on Windows 10 and Windows 11. This ingenious technology provides a Linux-compatible kernel interface and can interact directly with the windows operating system with performances very close to a native Linux distribution. Moreover, it allows a user to chose a Linux distribution to install from the Microsoft Store (more info in below).
 
 ### WSL is not a virtual machine !
 
-Oh my god, I have heard so many times *"WSL ? Yeah it's like a virtual machine on your Windows"* and it makes me want to vomit...
+Oh my god, I have heard so many times *"WSL ? Yeah it's like a virtual machine on your Windows"* but no. It's not as simple...
 Although WSl uses virtualization technologies in some cases (more information in the next section), it does not work in a partitioned environment on your Windows system like a virtual machine on VMWare or Virtualbox.
 
 Indeed, if you try to delete your Document folder for example, you will notice that it will be permanently removed from your computer. You can also create a new file with a text editor like vim or nano, and you will be able to edit it with a Windows text editor (like notepad. The WSL can access and interact with your file system directly.
@@ -18,6 +20,13 @@ Indeed, if you try to delete your Document folder for example, you will notice t
 
 ### WSL 1 vs WSL 2
 
+The first thing to know is that WSL 2 isn't only an evolution of the first version. The entire architecture has been redesigned.
+
+First of all, let's see how the architecture of WSL 1 looks like :
+
+![bg fit right](./img/WSL1.svg)
+
+As you can see, WSL 1 is a simple layer between the linux distribution and the Windows kernel. All the Linux syscalls are converted into Windows syscalls with bridges.
 ### The limits of WSL
 
 ## Install WSL on Windows
@@ -32,9 +41,25 @@ First, you must be running Windows 10 version 2004 or higher (Build 19041 or hig
 
 ### WSL distributions available at this time
 
-## Example of WSL use cases
+## Some WSL features
 
-### Mount an ext file system on Windows with WSL
+### Mount an ext file system on Windows (with WSL2 only) (non-persistent)
+
+First you must be running Windows 11 Build 22000 or higher and have admin privileges.
+
+
+
+``` Powershell
+GET-CimInstance -query "SELECT * from Win32_DiskDrive"
+```
+
+The command should return a list of physical drives in this format :  
+
+`\\.\PHYSICALDRIVEX` X : number of the physical drive
+
+``` Powershell
+wsl --mount DiskPath
+```
 
 ### Add a desktop environment to your WSL
 
@@ -54,4 +79,5 @@ https://docs.microsoft.com/en-us/windows/wsl/compare-versions
 
 https://www.whitewaterfoundry.com/what-is-wsl
 __________
-<i>Updated : 01/02/2022, Authors : Xen0rInspire, AnthonyF</i>
+
+*Updated : 01/02/2022, Authors : Xen0rInspire, AnthonyF*
