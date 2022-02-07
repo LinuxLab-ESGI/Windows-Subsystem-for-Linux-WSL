@@ -27,6 +27,9 @@ First of all, let's see how the architecture of WSL 1 looks like :
 ![bg fit right](./img/WSL1.svg)
 
 As you can see, WSL 1 is a simple layer between the linux distribution and the Windows kernel. All the Linux syscalls are converted into Windows syscalls with bridges.
+
+![bg fit right](./img/WSL2.svg)
+
 ### The limits of WSL
 
 ## Install WSL on Windows

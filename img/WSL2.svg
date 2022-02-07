@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Généré par Microsoft Visio, SVG Export WSL2.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.6929in" height="8.26772in"
+		viewBox="0 0 841.89 595.276" xml:space="preserve" color-interpolation-filters="sRGB" class="st12">
+	<v:documentProperties v:langID="1036" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvSubprocessMaster" v:prompt="" v:val="VT4(Rectangle)"/>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#bdd7ee;stroke:#4f87bb;stroke-width:0.75}
+		.st2 {visibility:visible}
+		.st3 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st4 {fill:#5b9bd5;stroke:#c7c8c8;stroke-width:0.25}
+		.st5 {fill:#feffff;font-family:Calibri;font-size:1.5em}
+		.st6 {font-size:1em}
+		.st7 {marker-end:url(#mrkr4-33);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st8 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st9 {marker-end:url(#mrkr13-42);marker-start:url(#mrkr13-40);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st10 {fill:none;stroke:none;stroke-width:0.25}
+		.st11 {fill:#5b9bd5;font-family:Calibri;font-size:1.5em}
+		.st12 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-33" class="st8" v:arrowType="4" v:arrowSize="2" v:setback="7.04" refX="-7.04" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) "/>
+		</marker>
+		<g id="lend13">
+			<path d="M 3 1 L 0 0 L 3 -1 L 3 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr13-40" class="st8" v:arrowType="13" v:arrowSize="2" v:setback="10.2" refX="10.2" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(3.52) "/>
+		</marker>
+		<marker id="mrkr13-42" class="st8" v:arrowType="13" v:arrowSize="2" v:setback="10.56" refX="-10.56" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-3.52,-3.52) "/>
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:userDefs>
+			<v:ud v:nameU="msvThemeOrder" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Page 1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Lien" v:index="0"/>
+		<g id="shape25-1" v:mID="25" v:groupContext="shape" transform="translate(431.362,-332.504)">
+			<title>Rectangle.25</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<rect x="0" y="350.504" width="356.173" height="244.772" class="st1"/>
+		</g>
+		<g id="shape1-3" v:mID="1" v:groupContext="shape" transform="translate(481.89,-171.283)">
+			<title>Rectangle</title>
+			<desc>Hypervisor</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="127.559" cy="547.441" width="255.12" height="95.6693"/>
+			<g id="shadow1-4" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+				<rect x="0" y="499.606" width="255.118" height="95.6693" class="st3"/>
+			</g>
+			<rect x="0" y="499.606" width="255.118" height="95.6693" class="st4"/>
+			<text x="88" y="552.84" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Hypervisor</text>		</g>
+		<g id="shape2-9" v:mID="2" v:groupContext="shape" transform="translate(56.6929,-460.063)">
+			<title>Rectangle.2</title>
+			<desc>Windows Apps</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="127.559" cy="547.441" width="255.12" height="95.6693"/>
+			<g id="shadow2-10" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+				<rect x="0" y="499.606" width="255.118" height="95.6693" class="st3"/>
+			</g>
+			<rect x="0" y="499.606" width="255.118" height="95.6693" class="st4"/>
+			<text x="73.11" y="552.84" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Windows Apps</text>		</g>
+		<g id="shape4-15" v:mID="4" v:groupContext="shape" transform="translate(56.6929,-289.984)">
+			<title>Rectangle.4</title>
+			<desc>Windows Kernel</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="127.559" cy="547.441" width="255.12" height="95.6693"/>
+			<g id="shadow4-16" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+				<rect x="0" y="499.606" width="255.118" height="95.6693" class="st3"/>
+			</g>
+			<rect x="0" y="499.606" width="255.118" height="95.6693" class="st4"/>
+			<text x="67.73" y="552.84" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Windows Kernel</text>		</g>
+		<g id="shape5-21" v:mID="5" v:groupContext="shape" transform="translate(184.252,-18)">
+			<title>Rectangle.5</title>
+			<desc>Hardware Layer (CPU, hard drives, RAM…)</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="276.378" cy="547.441" width="552.76" height="95.6693"/>
+			<g id="shadow5-22" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+				<rect x="0" y="499.606" width="552.756" height="95.6693" class="st3"/>
+			</g>
+			<rect x="0" y="499.606" width="552.756" height="95.6693" class="st4"/>
+			<text x="218.41" y="542.04" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Hardware Layer<v:lf/><tspan
+						x="182.2" dy="1.2em" class="st6">(</tspan>CPU, hard drives, RAM…)</text>		</g>
+		<g id="shape6-28" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(177.165,-282.898)">
+			<title>Lien dynamique</title>
+			<path d="M7.09 588.19 L7.09 595.28 L7.09 595.23" class="st7"/>
+		</g>
+		<g id="shape10-34" v:mID="10" v:groupContext="shape" v:layerMember="0" transform="translate(602.362,-171.283)">
+			<title>Lien dynamique.10</title>
+			<path d="M7.09 605.48 L7.09 605.84 L7.09 642.33" class="st9"/>
+		</g>
+		<g id="shape11-43" v:mID="11" v:groupContext="shape" v:layerMember="0" transform="translate(184.252,-289.984)">
+			<title>Lien dynamique.11</title>
+			<path d="M0 605.48 L0 605.84 L0 722.83 L141.73 722.83 L141.73 761.03" class="st9"/>
+		</g>
+		<g id="shape14-50" v:mID="14" v:groupContext="shape" v:layerMember="0" transform="translate(481.89,-219.118)">
+			<title>Lien dynamique.14</title>
+			<path d="M-10.2 595.28 L-10.56 595.28 L-297.64 595.28 L-297.64 534.97" class="st9"/>
+		</g>
+		<g id="shape17-57" v:mID="17" v:groupContext="shape" v:layerMember="0" transform="translate(177.165,-460.063)">
+			<title>Lien dynamique.17</title>
+			<path d="M7.09 605.48 L7.09 605.84 L7.09 659.13" class="st9"/>
+		</g>
+		<g id="shape18-64" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(602.362,-403.37)">
+			<title>Lien dynamique.18</title>
+			<path d="M7.09 605.48 L7.09 605.84 L7.09 721.13" class="st9"/>
+		</g>
+		<g id="group29-71" transform="translate(481.89,-403.37)" v:mID="29" v:groupContext="group">
+			<title>Feuille.29</title>
+			<g id="shape15-72" v:mID="15" v:groupContext="shape" transform="translate(0,-96.6729)">
+				<title>Rectangle.15</title>
+				<desc>Linux Distribution</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="127.559" cy="567.431" width="255.12" height="55.6893"/>
+				<g id="shadow15-73" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+					<rect x="0" y="539.586" width="255.118" height="55.6893" class="st3"/>
+				</g>
+				<rect x="0" y="539.586" width="255.118" height="55.6893" class="st4"/>
+				<text x="62.97" y="572.83" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Linux Distribution</text>			</g>
+			<g id="shape16-78" v:mID="16" v:groupContext="shape">
+				<title>Rectangle.16</title>
+				<desc>Linux Kernel</desc>
+				<v:userDefs>
+					<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+				</v:userDefs>
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="127.559" cy="567.431" width="255.12" height="55.6893"/>
+				<g id="shadow16-79" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+						transform="matrix(1,0,0,1,0.345598,1.97279)" class="st2">
+					<rect x="0" y="539.586" width="255.118" height="55.6893" class="st3"/>
+				</g>
+				<rect x="0" y="539.586" width="255.118" height="55.6893" class="st4"/>
+				<text x="82.76" y="572.83" class="st5" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Linux Kernel</text>			</g>
+		</g>
+		<g id="shape32-84" v:mID="32" v:groupContext="shape" v:layerMember="0" transform="translate(602.362,-500.043)">
+			<title>Lien dynamique.32</title>
+			<path d="M7.09 605.48 L7.09 605.84 L7.09 625.7" class="st9"/>
+		</g>
+		<g id="shape33-91" v:mID="33" v:groupContext="shape" transform="translate(623.622,-340.85)">
+			<title>Feuille.33</title>
+			<desc>Virtual Machine</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="76" cy="585.276" width="152" height="20"/>
+			<rect x="0" y="575.276" width="152" height="20" class="st10"/>
+			<text x="17.72" y="590.68" class="st11" v:langID="1036"><v:paragraph v:horizAlign="1"/><v:tabList/>Virtual Machine</text>		</g>
+		<g id="shape34-94" v:mID="34" v:groupContext="shape" v:layerMember="0" transform="translate(431.362,-454.89)">
+			<title>Lien dynamique.34</title>
+			<path d="M-10.2 595.28 L-10.56 595.28 L-43.37 595.28 L-43.37 542.27 L-108.99 542.27" class="st9"/>
+		</g>
+	</g>
+</svg>
