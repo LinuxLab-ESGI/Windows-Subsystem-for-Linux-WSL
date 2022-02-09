@@ -12,7 +12,7 @@ The WSL for **W**indows **S**ubsystem for **L**inux is a compatibility layer dev
 ### WSL is not a virtual machine !
 
 Oh my god, I have heard so many times *"WSL ? Yeah it's like a virtual machine on your Windows"* but no. It's not as simple...
-Although WSl uses virtualization technologies in some cases (more information in the next section), it does not work in a partitioned environment on your Windows system like a virtual machine on VMWare or Virtualbox.
+Although WSl uses virtualization technologies in some cases (more information in the next section), it does not work in a partitioned environment on your Windows system like a classic virtual machine on VMWare or Virtualbox.
 
 Indeed, if you try to delete your Document folder for example, you will notice that it will be permanently removed from your computer. You can also create a new file with a text editor like vim or nano, and you will be able to edit it with a Windows text editor (like notepad. The WSL can access and interact with your file system directly.
 
