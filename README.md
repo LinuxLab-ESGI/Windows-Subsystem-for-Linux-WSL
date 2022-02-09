@@ -20,7 +20,7 @@ Indeed, if you try to delete your Document folder for example, you will notice t
 
 ### WSL 1 vs WSL 2
 
-The first thing to know is that WSL 2 isn't only an evolution of the first version. The entire architecture has been redesigned.
+The first thing to know is that WSL 2 isn't only an simple evolution of the first version. The entire architecture has been redesigned and the operation is not the same.
 
 First of all, let's see how the architecture of WSL 1 looks like :
 
@@ -28,7 +28,13 @@ First of all, let's see how the architecture of WSL 1 looks like :
 
 As you can see, WSL 1 is a simple layer between the linux distribution and the Windows kernel. All the Linux syscalls are converted into Windows syscalls with bridges.
 
+However, we can notice in the architecture of the WSL 2 that there is a whole Linux kernel virtualized :
+
 ![bg fit right](./img/WSL2.svg)
+
+>The Hypervisor platform is an API that third-party developers can use for Hyper-V, VMWare Workstation/Player, Virtualbox... It adds an extended user-mode API for third-party virtualization stacks and applications to create and manage partitions at the hypervisor level, configure memory mappings for the partition, and create and control the execution of virtual processors.
+
+As we can see, the WSL 2 is based on Linux kernel virtualized with the Windows Hypervisor Platform (this is not Hyper-V !). This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20x faster compared to WSL 1 when unpacking a zipped tarball, and around 2-5x faster when using file intensive operations like git clone, apt uppragde, etc...
 
 ### The limits of WSL
 
@@ -49,7 +55,6 @@ First, you must be running Windows 10 version 2004 or higher (Build 19041 or hig
 ### Mount an ext file system on Windows (with WSL2 only) (non-persistent)
 
 First you must be running Windows 11 Build 22000 or higher and have admin privileges.
-
 
 
 ``` Powershell
@@ -79,6 +84,8 @@ https://docs.microsoft.com/en-us/windows/wsl/about
 https://docs.microsoft.com/en-us/windows/wsl/install
 
 https://docs.microsoft.com/en-us/windows/wsl/compare-versions
+
+https://docs.microsoft.com/en-us/virtualization/api/hypervisor-platform/hypervisor-platform
 
 https://www.whitewaterfoundry.com/what-is-wsl
 __________
