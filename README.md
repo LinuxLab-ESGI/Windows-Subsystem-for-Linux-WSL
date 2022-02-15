@@ -40,13 +40,19 @@ However, we can notice in the architecture of the WSL 2 that there is a whole Li
 
 >The Hypervisor platform is not Hyper-V ! It's an API that third-party developers can use for Hyper-V, VMWare Workstation/Player, Virtualbox... It adds an extended user-mode API for third-party virtualization stacks and applications to create and manage partitions at the hypervisor level, configure memory mappings for the partition, and create and control the execution of virtual processors.
 
-As we can see, the WSL 2 is based on a Linux kernel virtualized with the Windows Hypervisor Platform. This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20 times faster compared to WSL 1 when unpacking a zipped tar archive, and around 2-5 times faster when using file intensive operations like git clone, apt uppragde, etc...
+As we can see, the WSL 2 is based on a Linux kernel virtualized with the Windows Hypervisor Platform. This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20 times faster compared to WSL 1 when unpacking a zipped tar archive, and around 2-5 times faster when using file intensive operations like git clone, apt uppragde, etc... Besides, unlike the WSL 1, it supports 32 bits applications.
 
-However, if you are using files stored in storage devices on `/mnt` in your Windows file system, the WSL 1 will be faster than then second version. It has a lighter architecture and it does not need a hypervisor layer.
-
-But if you are using files stored in the root directory ( / ), WSL 2 will be even faster because file operations are moved on a VHD (Virtual Hardware Disk). You can access to this virtual disk with the windows explorer if you enter the command `explorer.exe` in your home directory.
+However, if you are using files stored in storage devices on `/mnt` in your Windows file system, the WSL 1 will be faster than then second version. It has a lighter architecture and it does not need a hypervisor layer. But if you are using files stored in the root directory ( / ), WSL 2 will be even faster because file operations are moved on a VHD (Virtual Hardware Disk). You can access to this virtual disk with the windows explorer if you enter the command `explorer.exe` in your home directory or directly with the windows explorer by specifying the path `\\wsl$\<name_of_the_distro>`.
 
 ### The limits of WSL
+
+First of all, hardware acceleration isn't supported so the graphic performances are quite poor and well known graphic standards, like the CUDA technology, are not implemented. Regarding the audio, it's not natively supported but it can be remedied by installing a network-capable sound server like PulseAudio.
+
+> Currently, a better integrated desktop oriented WSL is still in development and its named WSLg. At this time, according to Microsoft, it only works on Windows 11 (build 22000+) or Windows 11 Insider Preview (builds 21362+). If you want more information, check the references section below.
+
+Moreover, networking on WSL isn't fully reliable. WSL allows you to communicate with a network, but it may be less efficient because it needs to pass through a few layers in order to do work. This implies a considerable loss of performance when executing processes that operate at a low network level.
+
+As Microsoft says in its documentation, WSL has been for the developpers. So, if you want to host a Web service or sharing storages locally for example, it's better and more convenient to use a full Linux virtual machine in a classic hypervisor.
 
 ## Install WSL on Windows
 
@@ -64,7 +70,7 @@ First, you must be running Windows 10 version 2004 or higher (Build 19041 or hig
 
 ### Mount an ext file system on Windows (with WSL2 only) (non-persistent)
 
-First you must be running Windows 11 Build 22000 or higher and have admin privileges.
+First, you must be running Windows 11 Build 22000 or higher and have admin privileges.
 
 
 ``` Powershell
@@ -85,6 +91,8 @@ wsl --mount DiskPath
 
 ## Pengwin Linux
 
+https://github.com/WhitewaterFoundry/Pengwin
+
 ## Appendix - Sources and References
 
 You can find here all the references that we used to write this article and the presentation :
@@ -99,7 +107,11 @@ https://docs.microsoft.com/en-us/windows/wsl/compare-versions
 
 https://docs.microsoft.com/en-us/virtualization/api/hypervisor-platform/hypervisor-platform
 
+https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
+
 https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/
+
+https://www.it-connect.fr/wsl-comment-acceder-aux-fichiers-linux-depuis-windows-10/
 
 <br>
 
@@ -108,6 +120,8 @@ https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-1
 WSL 1 (only for issue reporting) : https://github.com/microsoft/WSL
 
 WSL 2 : https://github.com/microsoft/WSL2-Linux-Kernel
+
+WSLg : https://github.com/microsoft/wslg
 
 <br>
 
@@ -118,4 +132,4 @@ https://github.com/ethanhs/WSL-Programs
 https://github.com/davatron5000/can-i-subsystem-it
 __________
 
-*Updated : 14/02/2022, Authors : Xen0rInspire, AnthonyF*
+*Updated : 15/02/2022, Authors : Xen0rInspire, AnthonyF*
