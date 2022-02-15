@@ -52,7 +52,7 @@ First of all, hardware acceleration isn't supported so the graphic performances 
 
 Moreover, networking on WSL isn't fully reliable. WSL allows you to communicate with a network, but it may be less efficient because it needs to pass through a few layers in order to do work. This implies a considerable loss of performance when executing processes that operate at a low network level.
 
-As Microsoft says in its documentation, WSL has been for the developpers. So, if you want to host a Web service or sharing storages locally for example, it's better and more convenient to use a full Linux virtual machine in a classic hypervisor.
+As Microsoft says in its documentation, WSL has been designed for the developers. So, if you want to host a Web service or sharing storages locally for example, it's better and more convenient to use a full Linux virtual machine in a classic hypervisor.
 
 ## Install WSL on Windows
 
