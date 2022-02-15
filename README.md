@@ -5,7 +5,7 @@
 ![WSL-Logo](/img/logo-wsl.png)
 __________
 
-## What is the WSL and how it works?
+## What is the WSL and how it works ?
 
 The WSL for **W**indows **S**ubsystem for **L**inux is a compatibility layer developed by Microsoft for running Linux binaries natively (ELF format) in a console environment on Windows 10 and Windows 11. This ingenious technology provides a Linux-compatible kernel interface and can interact directly with the windows operating system with performances very close to a native Linux distribution. Moreover, it allows a user to chose a Linux distribution to install from the Microsoft Store (more info in below).
 
@@ -58,7 +58,7 @@ As Microsoft says in its documentation, WSL has been designed for the developers
 
 ### Requirements
 
-First, you must be running Windows 10 version 2004 or higher (Build 19041 or higher) or Windows 11.
+First, you must be running Windows 10 64bits version 2004 or higher (Build 19041 or higher) or Windows 11 64bits.
 
 >To check your Windows version and build number, select Windows logo key + R, type winver and select OK.
 
