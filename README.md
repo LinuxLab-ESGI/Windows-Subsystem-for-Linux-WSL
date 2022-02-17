@@ -80,6 +80,18 @@ wsl --install
 
 ### WSL distributions available at this time
 
+On the day this article was written you can install :
+
+- Ubuntu
+- Debian
+- Kali Linux
+- openSUSE
+- Alpine Linux
+- Pengwin (more information about it below)
+- Fedora Remix
+
+You can install the distribution you want directly on the Windows Store !
+
 ## Some useful WSL features
 
 ### Mount an ext file system on Windows (with WSL2 only) (non-persistent)
