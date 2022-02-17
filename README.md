@@ -113,7 +113,9 @@ wsl --mount DiskPath
 
 ### Add a desktop environment to your WSL
 
-### Use Docker on Windows (with WSL2 only)
+### Use Docker on Windows
+
+This procedure only works on the WSL 2.
 
 ## Appendix - Sources and References
 
@@ -154,4 +156,4 @@ https://github.com/ethanhs/WSL-Programs
 https://github.com/davatron5000/can-i-subsystem-it
 __________
 
-*Updated : 15/02/2022, Authors : Xen0rInspire, AnthonyF*
+*Updated : 17/02/2022, Authors : Xen0rInspire, AnthonyF*
