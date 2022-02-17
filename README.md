@@ -64,17 +64,16 @@ First, you must be running Windows 10 64bits version 2004 or higher (Build 19041
 
 If you have an older version, update your system with Windows Update.
 
-You need to have several Windows functionalities installed before using WSL. To install them, select Windows Logo key, type **Windows Features** and enter. This window should open :
+You need to have a Windows functionality installed before using WSL. To install it, select Windows Logo key, type **Windows Features** and enter. This window should open :
 
 ![bg fit right](./img/features.png)
 
-Make sure to install both **Virtual Machine Platform** and **Windows Hypervisor Platform**. After this, you must restart your Windows system.
+Make sure to install **Virtual Machine Platform**. After this, you must restart your Windows system.
 
-Or you can type this command in a prompt with administrator privilgees to install it :
+Or you can type this command in a prompt with administrator privileges to install it :
 
 ```Powershell
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-dism.exe /online /enable-feature /featurename:WindowsHypervisorPlatform /all /norestart
 ```
 
 Make sure to restart the system afterwards.
