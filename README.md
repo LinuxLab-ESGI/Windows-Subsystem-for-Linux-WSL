@@ -16,9 +16,9 @@ Although WSl uses virtualization technologies in some cases (more information in
 
 It's important to know that all your storage devices that have an assigned letter by the Windows operating system (for example C:, D:, E: ...) are reachable in the `/mnt` directory. As an example, the famous `C:` partition of your Windows system is in `/mnt/c` and this is same thing for the others.
 
-> The NTFS and FAT partitions are directly mounted in the `/mnt` directory but it's necessary to execute some commands to mount EXT4 ones.
+> The NTFS and FAT partitions are directly mounted in the `/mnt` directory but it's necessary to execute some commands to mount EXT4 ones (more information below).
 
-Therefore, the WSL can access to your storage devices and it may have some consequences. Indeed, if you try to delete your Document folder for example, you will notice that it will be permanently removed from your computer. You can also create a new file with a text editor like vim or nano, and you will be able to edit it with a Windows text editor (like notepad.
+Therefore, the WSL can access to your storage devices and it may have some consequences. Indeed, if you try to delete your Document folder for example, you will notice that it will be permanently removed from your computer. You can also create a new file with a text editor like vim or nano, and you will be able to edit it with a Windows text editor (like notepad for example).
 
 > For the curious ones, we tried to do a `rm -fr /mnt/c` command with the WSL and the root privileges, to delete all the files in the **C:\\** directory. It seems that the WSL can only delete the files in the user folder in **C:\Users\<name_of-the_user>**. However, the windows system becomes quite unstable and slow.
 
@@ -64,7 +64,7 @@ First, you must be running Windows 10 64bits version 2004 or higher (Build 19041
 
 If you have an older version, update your system with Windows Update.
 
-You need to have several Windows functionalities installed before using WSL. To install them, select Windows Logo key and enter **Windows Features**. This window sould open :
+You need to have several Windows functionalities installed before using WSL. To install them, select Windows Logo key and enter **Windows Features**. This window should open :
 
 ![bg fit right](./img/features.png)
 
@@ -80,7 +80,7 @@ wsl --install
 
 ### WSL distributions available at this time
 
-On the day this article was written you can install :
+At this moment (when this article was written), you can install these distributions :
 
 - Ubuntu
 - Debian
@@ -94,16 +94,16 @@ You can install the distribution you want directly on the Windows Store !
 
 ## Some useful WSL features
 
-### Mount an ext file system on Windows (with WSL2 only) (non-persistent)
+### Mount an ext file system on Windows (non-persistent)
 
-First, you must be running Windows 11 Build 22000 or higher and have admin privileges.
+First, you must be running Windows 11 Build 22000 or higher and have admin privileges. This procedure only works on the WSL 2.
 
 
 ``` Powershell
 GET-CimInstance -query "SELECT * from Win32_DiskDrive"
 ```
 
-The command should return a list of physical drives in this format :  
+This command should return a list of physical drives in this format :  
 
 `\\.\PHYSICALDRIVEX` X : number of the physical drive
 
@@ -114,10 +114,6 @@ wsl --mount DiskPath
 ### Add a desktop environment to your WSL
 
 ### Use Docker on Windows (with WSL2 only)
-
-## Pengwin Linux
-
-https://github.com/WhitewaterFoundry/Pengwin
 
 ## Appendix - Sources and References
 
