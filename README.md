@@ -62,6 +62,8 @@ First, you must be running Windows 10 64bits version 2004 or higher (Build 19041
 
 >To check your Windows version and build number, select Windows logo key + R, type winver and select OK.
 
+If you have an older version, update your system with Windows Update.
+
 You need to have several Windows functionalities installed before using WSL. To install them, select Windows Logo key and enter **Windows Features**. This window sould open :
 
 ![bg fit right](./img/features.png)
@@ -70,7 +72,7 @@ Make sure to install both **Virtual Machine Platform** and **Windows Hypervisor 
 
 ### Download WSL
 
-You can install the WSL feature with the same procedure described before by selecting the **Windows Subsystem for Linux** or with the following command :
+You can install the WSL feature with the same procedure described before by selecting the **Windows Subsystem for Linux** or with the following Powershell command as an administrator :
 
 ```Powershell
 wsl --install
@@ -137,7 +139,7 @@ WSLg : https://github.com/microsoft/wslg
 
 <br>
 
-**Lists of different compatibles softwares that work on WSL :**
+**Lists of different compatibles softwares that work or not on WSL :**
 
 https://github.com/ethanhs/WSL-Programs
 
