@@ -38,7 +38,7 @@ However, we can notice in the architecture of the WSL 2 that there is a whole Li
 
 ![bg fit right](./img/WSL2.svg)
 
->The Hypervisor platform is not Hyper-V ! It's an API that third-party developers can use for Hyper-V, VMware Workstation/Player, VirtualBox... It adds an extended user-mode API for third-party virtualization stacks and applications to create and manage partitions at the hypervisor level, configure memory mappings for the partition, and create and control the execution of virtual processors.
+>The Virtual Machine Platform is a less powerful version of Hyper-V that still enables a hypervisor. Note that Microsoft if very vague on what the actual differences are between the Virtual Machine Platform and Hyper-V.
 
 As we can see, the WSL 2 is based on a Linux kernel virtualized with the Windows Hypervisor Platform. This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20 times faster compared to WSL 1 when unpacking a zipped tar archive, and around 2-5 times faster when using file intensive operations like git clone, apt upgrade, etc. Besides, unlike the WSL 1, it supports 32-bits applications.
 
@@ -128,8 +128,6 @@ wsl --mount DiskPath
 ```
 
 ### Add a desktop environment to your WSL
-
-### Use Docker on Windows
 
 This procedure only works on the WSL 2.
 

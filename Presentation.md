@@ -119,10 +119,8 @@ https://github.com/microsoft/wslg
 
 ## Prerequisites
 
-- Running Windows 10 64bits version 2004 or Higher, 
-or Windows 11 64bits
+- Running Windows 10 64bits version 2004 or higher, or Windows 11 64bits
 - Virtual Machine Platform feature
-- Windows Hypervisor Platform feature
 
 ---
 
