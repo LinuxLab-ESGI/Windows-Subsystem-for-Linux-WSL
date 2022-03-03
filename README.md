@@ -57,7 +57,7 @@ However, we can notice in the architecture of the WSL 2 that there is a whole Li
 
 >The Virtual Machine Platform is a less powerful version of Hyper-V that still enables a hypervisor. Note that Microsoft if very vague on what the actual differences are between the Virtual Machine Platform and Hyper-V.
 
-As we can see, the WSL 2 is based on a Linux kernel virtualized with the Windows Hypervisor Platform. This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20 times faster compared to WSL 1 when unpacking a zipped tar archive, and around 2-5 times faster when using file intensive operations like git clone, apt upgrade, etc. Besides, unlike the WSL 1, it supports 32-bits applications.
+As we can see, the WSL 2 is based on a Linux kernel virtualized with the Virtual Machine Platform. This version has an increased I/O performance and a full system call compatibility. Indeed, initial versions of WSL 2 run up to 20 times faster compared to WSL 1 when unpacking a zipped tar archive, and around 2-5 times faster when using file intensive operations like git clone, apt upgrade, etc. Besides, unlike the WSL 1, it supports 32-bits applications.
 
 However, if you are using files stored in storage devices on `/mnt` in your Windows file system, the WSL 1 will be faster than then second version. It has a lighter architecture and it does not need a hypervisor layer. But if you are using files stored in the root directory ( / ), WSL 2 will be even faster because file operations are moved on a VHD (Virtual Hardware Disk). You can access to this virtual disk with the windows explorer if you enter the command `explorer.exe` in your home directory or directly with the windows explorer by specifying the path `\\wsl$\<name_of_the_distro>`.
 
@@ -121,7 +121,7 @@ At this moment (when this article was written), you can install these distributi
 - Kali Linux
 - openSUSE
 - Alpine Linux
-- Pengwin (more information about it below)
+- Pengwin (more information about in Presentation.md)
 - Fedora Remix
 
 You can install the distribution you want directly on the Windows Store !
@@ -330,4 +330,4 @@ https://github.com/ethanhs/WSL-Programs
 https://github.com/davatron5000/can-i-subsystem-it
 __________
 
-*Updated : 18/02/2022, Authors : Xen0rInspire, AnthonyF*
+*Updated : 03/03/2022, Authors : Xen0rInspire, AnthonyF*
