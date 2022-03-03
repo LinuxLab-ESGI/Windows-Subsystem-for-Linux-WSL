@@ -247,12 +247,6 @@ Stop WSL :
 wsl --shutdown
 ```
 
-Delete a distro :
-
-```Powershell
-wsl --unregister Dstro
-```
-
 Export a distro (Backup) :
 
 ```Powershell
