@@ -5,6 +5,23 @@
 ![WSL-Logo](/img/logo-wsl.png)
 __________
 
+- [Windows Subsystem for Linux (known as WSL)](#windows-subsystem-for-linux-known-as-wsl)
+  - [What is the WSL and how it works ?](#what-is-the-wsl-and-how-it-works-)
+    - [WSL is not a virtual machine !](#wsl-is-not-a-virtual-machine-)
+    - [WSL 1 vs WSL 2](#wsl-1-vs-wsl-2)
+    - [The limits of WSL](#the-limits-of-wsl)
+  - [Install WSL on Windows](#install-wsl-on-windows)
+    - [Requirements](#requirements)
+    - [Download WSL](#download-wsl)
+    - [WSL distributions available at this time](#wsl-distributions-available-at-this-time)
+  - [Some useful WSL features](#some-useful-wsl-features)
+    - [Mount an EXT file system on Windows (or other filesystem)](#mount-an-ext-file-system-on-windows-or-other-filesystem)
+      - [Mount an entire disk](#mount-an-entire-disk)
+      - [Mount a partition from a disk](#mount-a-partition-from-a-disk)
+    - [Add a desktop environment to your WSL](#add-a-desktop-environment-to-your-wsl)
+    - [Some useful commands](#some-useful-commands)
+  - [Appendix - Sources and References](#appendix---sources-and-references)
+
 ## What is the WSL and how it works ?
 
 The WSL for **W**indows **S**ubsystem for **L**inux is a compatibility layer developed by Microsoft for running Linux binaries natively (ELF format) in a console environment on Windows 10 and Windows 11. This ingenious technology provides a Linux-compatible kernel interface and can interact directly with the Windows operating system with performances very close to a native Linux distribution. Moreover, it allows a user to choose a Linux distribution to install directly from the Microsoft Store (more info in below).
@@ -109,11 +126,23 @@ At this moment (when this article was written), you can install these distributi
 
 You can install the distribution you want directly on the Windows Store !
 
+Or you can install it via a console with the command : 
+
+``` PowerShell
+wsl --install --distribution DistribName
+```
+
 ## Some useful WSL features
 
-### Mount an ext file system on Windows (non-persistent)
+### Mount an EXT file system on Windows (or other filesystem)
 
-First, you must be running Windows 11 Build 22000 or higher and have admin privileges. This procedure only works on the WSL 2.
+First, you must be running Windows 11 Build 22000 or higher and have admin privileges. This procedure only works on the WSL 2 and it is non-peristent, the filesystem will be unmounted after WSL shutdown.
+
+#### Mount an entire disk
+
+To mount an entire disk, we first need to identify the physical disk.
+
+In a windows console :
 
 ``` Powershell
 GET-CimInstance -query "SELECT * from Win32_DiskDrive"
@@ -123,13 +152,142 @@ This command should return a list of physical drives in this format :
 
 `\\.\PHYSICALDRIVEX` X : number of the physical drive
 
+Then we can mount it with the command :
+
 ``` Powershell
-wsl --mount DiskPath
+wsl --mount \\.\PHYSICALDRIVEX
+```
+
+> Default filesystem is ext4, we can specify the type of filesystem with the argument `t`. We can list the available filesystem with `cat /proc/filesystems`
+
+The mounted disk should be now accessible via the Explorer in `\\wsl$\Distro\mnt\PHYSICALDRIVEX`
+
+Or directly in the distro used : `/mnt/PHYSICALDRIVEX`
+
+#### Mount a partition from a disk
+
+To mount only a partition from a disk, we first need to identify the physical disk as before.
+In a windows console :
+
+``` Powershell
+GET-CimInstance -query "SELECT * from Win32_DiskDrive"
+```
+
+Then mount the physcial disk :
+
+``` Powershell
+wsl --mount \\.\PHYSICALDRIVEX
+```
+
+Now we are going to list the available partitions with :
+
+```Bash
+lsblk
+```
+
+It should return something like this :
+
+```Text
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sdb      8:16   0    1G  0 disk
+├─sdb2   8:18   0   50M  0 part
+├─sdb3   8:19   0  873M  0 part
+└─sdb1   8:17   0  100M  0 part
+sdc      8:32   0  256G  0 disk /
+sda      8:0    0  256G  0 disk
+```
+
+We can now mount the partition we want by specifying only the number of the partition. For instance if it's `sdb1`, we specify `1` :
+
+```PowerShell
+wsl --mount \\.\PHYSICALDRIVEX --partition 1 --type <Filesystem>
 ```
 
 ### Add a desktop environment to your WSL
 
 This procedure only works on the WSL 2.
+WSL 2 allows us to run linux applications with GUI by default.
+
+You could run a complete desktop environnement but we need a X server.
+There are plenty of tutos about that.
+
+[X11 server with Xfce](https://www.youtube.com/watch?v=8SuERIEJJUA)
+
+If you are in the kali team, they have built a nice tool called Win-KeX which provides a Kali Desktop Experience for WSL 2.
+
+In the kali console you can install the tool with :
+
+```Bash
+sudo apt install -y kali-win-kex
+```
+
+To launch it in Window mode with sound support :
+
+```Bash
+kex --win -s
+```
+
+To launch it in Enhanced Session Mode :
+
+```Bash
+kex --esm --ip -s
+```
+
+### Some useful commands
+
+Update WSL :
+
+```Powershell
+wsl --update
+```
+
+Stop WSL :
+
+```Powershell
+wsl --shutdown
+```
+
+Delete a distro :
+
+```Powershell
+wsl --unregister Dstro
+```
+
+Export a distro (Backup) :
+
+```Powershell
+wsl --export distro filename.tar 
+```
+
+Import a distro (Restore) :
+
+```Powershell
+wsl --import distro install_location filename.tar
+```
+
+List distros and version :
+
+```Powershell
+wsl -l -v
+```
+
+List available distros to install :
+
+```Powershell
+wsl --list --online
+```
+
+Set WSL default version to 2 :
+
+```Powershell
+wsl --set-default-version 2
+```
+
+Set WSL default version to 2 :
+
+```Powershell
+wsl --set-default-version 2
+```
 
 ## Appendix - Sources and References
 
@@ -150,6 +308,8 @@ https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 https://www.howtogeek.com/426749/how-to-access-your-linux-wsl-files-in-windows-10/
 
 https://www.it-connect.fr/wsl-comment-acceder-aux-fichiers-linux-depuis-windows-10/
+
+https://www.kali.org/docs/wsl/win-kex/
 
 <br>
 
