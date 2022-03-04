@@ -121,7 +121,7 @@ At this moment (when this article was written), you can install these distributi
 - Kali Linux
 - openSUSE
 - Alpine Linux
-- Pengwin (more information about in Presentation.md)
+- Pengwin (more information about it in Presentation.md)
 - Fedora Remix
 
 You can install the distribution you want directly on the Windows Store !
