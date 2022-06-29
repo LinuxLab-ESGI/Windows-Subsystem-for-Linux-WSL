@@ -307,7 +307,7 @@ https://www.kali.org/docs/wsl/win-kex/
 
 <br>
 
-**Official GitHub repositories of the WSL project :**
+**Official GitHub repositories of the WSL projects :**
 
 WSL 1 (only for issue reporting) : https://github.com/microsoft/WSL
 
